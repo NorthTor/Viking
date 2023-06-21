@@ -6,7 +6,7 @@ Viking Wrist Watch
 Overview
 ********
 
-This is the wor In progress
+This is a work in progress
 
 Building and Running
 ********************
