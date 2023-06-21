@@ -1,6 +1,6 @@
 .. Software for the Viking watch:
 
-Viking Wrist Watch
+The Viking Watch
 ##################
 
 Overview
