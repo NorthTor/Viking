@@ -1,0 +1,11 @@
+{
+  "nrf-connect.topdir": "${nrf-connect.sdk:2.3.0}",
+  "nrf-connect.toolchain.path": "${nrf-connect.toolchain:2.3.0}",
+  "files.associations": {
+    "lvgl.h": "c",
+    "random": "c",
+    "gpio.h": "c",
+    "max6921.h": "c",
+    "device.h": "c"
+  }
+}
