@@ -89,7 +89,6 @@ void main(void)
 	lv_label_set_text(label5, LV_SYMBOL_POWER);
 	lv_obj_align(label5, LV_ALIGN_CENTER, 0, 0);
 	
-
 	lv_task_handler();
 	display_blanking_off(display_dev);
 
