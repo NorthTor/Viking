@@ -305,7 +305,7 @@
 				pinctrl-names = "default", "sleep";
 				st7735r_st7735r_ada_160x128: st7735r@0 {
 					compatible = "sitronix,st7735r";
-					spi-max-frequency = < 0x61a80 >;
+					spi-max-frequency = < 0x30d40 >;
 					reg = < 0x0 >;
 					cmd-data-gpios = < &gpio0 0xe 0x1 >;
 					reset-gpios = < &gpio0 0xf 0x1 >;

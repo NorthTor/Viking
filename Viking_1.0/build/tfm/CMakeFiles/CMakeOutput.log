@@ -11,7 +11,7 @@ The output was:
 
 Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "CMakeCCompilerId.o"
 
-The C compiler identification is GNU, found in "/Users/torkaufmanngjerde/Documents/viking_software/uart/build/tfm/CMakeFiles/3.20.5/CompilerIdC/CMakeCCompilerId.o"
+The C compiler identification is GNU, found in "/Users/torkaufmanngjerde/Documents/Viking/Viking_1.0/build/tfm/CMakeFiles/3.20.5/CompilerIdC/CMakeCCompilerId.o"
 
 Checking whether the ASM compiler is GNU using "--version" matched "(GNU assembler)|(GCC)|(Free Software Foundation)":
 arm-zephyr-eabi-gcc (Zephyr SDK 0.15.2) 12.1.0

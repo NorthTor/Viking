@@ -1,0 +1,2 @@
+osource "/Users/torkaufmanngjerde/Documents/viking_software/lvgl_nordic_example/boards/shields/*/Kconfig.shield"
+osource "/opt/nordic/ncs/v2.1.1/nrf/boards/shields/*/Kconfig.shield"

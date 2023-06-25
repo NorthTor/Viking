@@ -39,26 +39,26 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/Users/torkaufmanngjerde/Documents/viking_software/uart/build/modules/nrf/subsys/net/cmake_install.cmake")
+  include("/Users/torkaufmanngjerde/Documents/Viking/Viking_1.0/build/modules/nrf/subsys/net/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/Users/torkaufmanngjerde/Documents/viking_software/uart/build/modules/nrf/subsys/dfu/cmake_install.cmake")
+  include("/Users/torkaufmanngjerde/Documents/Viking/Viking_1.0/build/modules/nrf/subsys/dfu/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/Users/torkaufmanngjerde/Documents/viking_software/uart/build/modules/nrf/subsys/shell/cmake_install.cmake")
+  include("/Users/torkaufmanngjerde/Documents/Viking/Viking_1.0/build/modules/nrf/subsys/shell/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/Users/torkaufmanngjerde/Documents/viking_software/uart/build/modules/nrf/subsys/debug/cmake_install.cmake")
+  include("/Users/torkaufmanngjerde/Documents/Viking/Viking_1.0/build/modules/nrf/subsys/debug/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/Users/torkaufmanngjerde/Documents/viking_software/uart/build/modules/nrf/subsys/partition_manager/cmake_install.cmake")
+  include("/Users/torkaufmanngjerde/Documents/Viking/Viking_1.0/build/modules/nrf/subsys/partition_manager/cmake_install.cmake")
 endif()
 

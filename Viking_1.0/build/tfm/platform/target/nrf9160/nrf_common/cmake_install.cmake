@@ -2,7 +2,7 @@
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/Users/torkaufmanngjerde/Documents/viking_software/uart/build/tfm/install")
+  set(CMAKE_INSTALL_PREFIX "/Users/torkaufmanngjerde/Documents/Viking/Viking_1.0/build/tfm/install")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -39,25 +39,25 @@ endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   list(APPEND CMAKE_ABSOLUTE_DESTINATION_FILES
-   "/Users/torkaufmanngjerde/Documents/viking_software/uart/build/tfm/install/interface/include/tfm_ioctl_core_api.h")
+   "/Users/torkaufmanngjerde/Documents/Viking/Viking_1.0/build/tfm/install/interface/include/tfm_ioctl_core_api.h")
   if(CMAKE_WARN_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(WARNING "ABSOLUTE path INSTALL DESTINATION : ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
   if(CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
-file(INSTALL DESTINATION "/Users/torkaufmanngjerde/Documents/viking_software/uart/build/tfm/install/interface/include" TYPE FILE MESSAGE_NEVER FILES "/opt/nordic/ncs/v2.3.0/modules/tee/tf-m/trusted-firmware-m/platform/ext/target/nordic_nrf/common/core/services/include/tfm_ioctl_core_api.h")
+file(INSTALL DESTINATION "/Users/torkaufmanngjerde/Documents/Viking/Viking_1.0/build/tfm/install/interface/include" TYPE FILE MESSAGE_NEVER FILES "/opt/nordic/ncs/v2.3.0/modules/tee/tf-m/trusted-firmware-m/platform/ext/target/nordic_nrf/common/core/services/include/tfm_ioctl_core_api.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   list(APPEND CMAKE_ABSOLUTE_DESTINATION_FILES
-   "/Users/torkaufmanngjerde/Documents/viking_software/uart/build/tfm/install/interface/src/tfm_ioctl_core_ns_api.c")
+   "/Users/torkaufmanngjerde/Documents/Viking/Viking_1.0/build/tfm/install/interface/src/tfm_ioctl_core_ns_api.c")
   if(CMAKE_WARN_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(WARNING "ABSOLUTE path INSTALL DESTINATION : ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
   if(CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
-file(INSTALL DESTINATION "/Users/torkaufmanngjerde/Documents/viking_software/uart/build/tfm/install/interface/src" TYPE FILE MESSAGE_NEVER FILES "/opt/nordic/ncs/v2.3.0/modules/tee/tf-m/trusted-firmware-m/platform/ext/target/nordic_nrf/common/core/services/src/tfm_ioctl_core_ns_api.c")
+file(INSTALL DESTINATION "/Users/torkaufmanngjerde/Documents/Viking/Viking_1.0/build/tfm/install/interface/src" TYPE FILE MESSAGE_NEVER FILES "/opt/nordic/ncs/v2.3.0/modules/tee/tf-m/trusted-firmware-m/platform/ext/target/nordic_nrf/common/core/services/src/tfm_ioctl_core_ns_api.c")
 endif()
 

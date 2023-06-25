@@ -30,11 +30,6 @@
 
 void main(void)
 {		
-	lv_obj_t *label1;
-	lv_obj_t *label2;
-	lv_obj_t *label3;
-	lv_obj_t *label4;
-
 	// VFD display initialization
 	const struct device *VFD_dev;
 	VFD_dev = VFD_init();
@@ -55,16 +50,45 @@ void main(void)
 		return;
 	}
 
+// STYLES Start ----------------------------------
+	uint8_t	R = 0;
+	uint8_t	G = 0;
+	uint8_t	B = 0;
+	lv_color_t custom_color = lv_color_make(R, G, B);
+	
+	lv_obj_set_style_bg_color(lv_scr_act(), custom_color, LV_PART_MAIN);
+	lv_obj_set_style_text_color(lv_scr_act(), lv_color_hex(0xffffff), LV_PART_MAIN);
 
+	static lv_style_t style;
+	lv_style_init(&style);
+	lv_style_set_bg_color(&style, custom_color);
+	lv_style_set_border_width(&style, 0);
+
+// STYLES end ----------------------------------
+
+	lv_obj_t *bg;
+	bg = lv_obj_create(lv_scr_act());
+	lv_obj_set_size(bg, 80, 160);
+	lv_obj_align(bg, LV_ALIGN_CENTER, 0, 0);
+	lv_obj_add_style(bg, &style, LV_STATE_DEFAULT);	
+
+	lv_obj_t *label1;
 	label1 = lv_label_create(lv_scr_act());
-	label2 = lv_label_create(lv_scr_act());
-	label3 = lv_label_create(lv_scr_act());
-	label4 = lv_label_create(lv_scr_act());
+	lv_label_set_recolor(label1, true);  
+	lv_label_set_text(label1, "#ffffff TOR");
+	lv_obj_align(label1, LV_ALIGN_CENTER, 0, -60);
 
-	lv_label_set_text(label1, "TOR");
-	lv_obj_align(label1, LV_ALIGN_CENTER, 0, 0);
+	lv_obj_t *label2;
+	label2 = lv_label_create(lv_scr_act());
+	lv_label_set_recolor(label1, true);  
 	lv_label_set_text(label2, "DESIGN");
-	lv_obj_align(label2, LV_ALIGN_CENTER, 0, 15);
+	lv_obj_align(label2, LV_ALIGN_CENTER, 0, -45);
+
+	lv_obj_t *label5;
+	label5 = lv_label_create(lv_scr_act());
+	lv_label_set_text(label5, LV_SYMBOL_POWER);
+	lv_obj_align(label5, LV_ALIGN_CENTER, 0, 0);
+	
 
 	lv_task_handler();
 	display_blanking_off(display_dev);
@@ -91,6 +115,8 @@ void main(void)
 		int power_good = gpio_pin_get_raw(gpio_dev, STATUS_PGOOD_BATTERY); // 0 indicates valid external power source connected, 1 = no power source
 		int bat_charging = gpio_pin_get_raw(gpio_dev, STATUS_CHARGE); // 0 indicates battery charging, 1 = no charging taking place
 
+		lv_obj_t *label3;
+		label3 = lv_label_create(lv_scr_act());
 		if(power_good == 1){
 			lv_label_set_text(label3, "Power: OFF");
 		}
@@ -102,6 +128,8 @@ void main(void)
 		lv_label_set_text(label3, buf1);
 		lv_obj_align(label3, LV_ALIGN_BOTTOM_MID, 0, 0);
 
+		lv_obj_t *label4;
+		label4 = lv_label_create(lv_scr_act());
 		lv_label_set_text(label4, buf2);
 		lv_obj_align(label4, LV_ALIGN_BOTTOM_MID, 0, -15);
 

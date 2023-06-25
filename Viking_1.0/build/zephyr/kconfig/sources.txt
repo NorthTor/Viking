@@ -1,7 +1,7 @@
-/Users/torkaufmanngjerde/Documents/viking_software/uart/build/Kconfig/Kconfig.dts
-/Users/torkaufmanngjerde/Documents/viking_software/uart/build/Kconfig/Kconfig.modules
-/Users/torkaufmanngjerde/Documents/viking_software/uart/build/Kconfig/Kconfig.shield
-/Users/torkaufmanngjerde/Documents/viking_software/uart/build/Kconfig/Kconfig.shield.defconfig
+/Users/torkaufmanngjerde/Documents/Viking/Viking_1.0/build/Kconfig/Kconfig.dts
+/Users/torkaufmanngjerde/Documents/Viking/Viking_1.0/build/Kconfig/Kconfig.modules
+/Users/torkaufmanngjerde/Documents/Viking/Viking_1.0/build/Kconfig/Kconfig.shield
+/Users/torkaufmanngjerde/Documents/Viking/Viking_1.0/build/Kconfig/Kconfig.shield.defconfig
 /opt/nordic/ncs/toolchains/v2.3.0/opt/zephyr-sdk/cmake/zephyr/Kconfig
 /opt/nordic/ncs/v2.3.0/modules/debug/TraceRecorder/config/Kconfig
 /opt/nordic/ncs/v2.3.0/modules/debug/TraceRecorder/kernelports/Zephyr/Kconfig

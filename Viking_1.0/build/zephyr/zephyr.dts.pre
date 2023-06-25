@@ -1010,8 +1010,8 @@ arduino_spi: &spi3 {
  status = "disabled";
 };
 # 0 "<command-line>" 2
-# 1 "/Users/torkaufmanngjerde/Documents/viking_software/uart/nrf9160dk_nrf9160_ns.overlay" 1
-# 22 "/Users/torkaufmanngjerde/Documents/viking_software/uart/nrf9160dk_nrf9160_ns.overlay"
+# 1 "/Users/torkaufmanngjerde/Documents/Viking/Viking_1.0/nrf9160dk_nrf9160_ns.overlay" 1
+# 22 "/Users/torkaufmanngjerde/Documents/Viking/Viking_1.0/nrf9160dk_nrf9160_ns.overlay"
  / {
  chosen {
   zephyr,display = &st7735r_st7735r_ada_160x128;
@@ -1028,7 +1028,7 @@ arduino_spi: &spi3 {
 
  st7735r_st7735r_ada_160x128: st7735r@0 {
   compatible = "sitronix,st7735r";
-  spi-max-frequency = <400000>;
+  spi-max-frequency = <200000>;
   reg = <0>;
   cmd-data-gpios = <&gpio0 14 (1 << 0)>;
   reset-gpios = <&gpio0 15 (1 << 0)>;

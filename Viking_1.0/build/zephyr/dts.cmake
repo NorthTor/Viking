@@ -495,7 +495,7 @@ set_target_properties(devicetree_target PROPERTIES "DT_PROP|/soc/peripheral@4000
 set_target_properties(devicetree_target PROPERTIES "DT_PROP|/soc/peripheral@40000000/spi@b000/st7735r@0|inversion-on" "True")
 set_target_properties(devicetree_target PROPERTIES "DT_PROP|/soc/peripheral@40000000/spi@b000/st7735r@0|rgb-is-inverted" "False")
 set_target_properties(devicetree_target PROPERTIES "DT_PROP|/soc/peripheral@40000000/spi@b000/st7735r@0|reg" "0;")
-set_target_properties(devicetree_target PROPERTIES "DT_PROP|/soc/peripheral@40000000/spi@b000/st7735r@0|spi-max-frequency" "400000")
+set_target_properties(devicetree_target PROPERTIES "DT_PROP|/soc/peripheral@40000000/spi@b000/st7735r@0|spi-max-frequency" "200000")
 set_target_properties(devicetree_target PROPERTIES "DT_PROP|/soc/peripheral@40000000/spi@b000/st7735r@0|duplex" "0")
 set_target_properties(devicetree_target PROPERTIES "DT_PROP|/soc/peripheral@40000000/spi@b000/st7735r@0|frame-format" "0")
 set_target_properties(devicetree_target PROPERTIES "DT_PROP|/soc/peripheral@40000000/spi@b000/st7735r@0|compatible" "sitronix,st7735r;")

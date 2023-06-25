@@ -2,7 +2,7 @@
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/Users/torkaufmanngjerde/Documents/viking_software/uart/build/tfm/install")
+  set(CMAKE_INSTALL_PREFIX "/Users/torkaufmanngjerde/Documents/Viking/Viking_1.0/build/tfm/install")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 

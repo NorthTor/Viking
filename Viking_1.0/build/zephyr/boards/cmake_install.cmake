@@ -39,6 +39,6 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/Users/torkaufmanngjerde/Documents/viking_software/uart/build/zephyr/boards/arm/nrf9160dk_nrf9160/cmake_install.cmake")
+  include("/Users/torkaufmanngjerde/Documents/Viking/Viking_1.0/build/zephyr/boards/arm/nrf9160dk_nrf9160/cmake_install.cmake")
 endif()
 

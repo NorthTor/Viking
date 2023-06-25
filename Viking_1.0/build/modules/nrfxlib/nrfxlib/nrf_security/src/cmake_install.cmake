@@ -39,16 +39,16 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/Users/torkaufmanngjerde/Documents/viking_software/uart/build/modules/nrfxlib/nrfxlib/nrf_security/src/drivers/cmake_install.cmake")
+  include("/Users/torkaufmanngjerde/Documents/Viking/Viking_1.0/build/modules/nrfxlib/nrfxlib/nrf_security/src/drivers/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/Users/torkaufmanngjerde/Documents/viking_software/uart/build/modules/nrfxlib/nrfxlib/nrf_security/src/legacy/cmake_install.cmake")
+  include("/Users/torkaufmanngjerde/Documents/Viking/Viking_1.0/build/modules/nrfxlib/nrfxlib/nrf_security/src/legacy/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/Users/torkaufmanngjerde/Documents/viking_software/uart/build/modules/nrfxlib/nrfxlib/nrf_security/src/psa/cmake_install.cmake")
+  include("/Users/torkaufmanngjerde/Documents/Viking/Viking_1.0/build/modules/nrfxlib/nrfxlib/nrf_security/src/psa/cmake_install.cmake")
 endif()
 

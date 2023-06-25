@@ -2,7 +2,7 @@
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/Users/torkaufmanngjerde/Documents/viking_software/uart/build/tfm/install")
+  set(CMAKE_INSTALL_PREFIX "/Users/torkaufmanngjerde/Documents/Viking/Viking_1.0/build/tfm/install")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -39,11 +39,11 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/Users/torkaufmanngjerde/Documents/viking_software/uart/build/tfm/secure_fw/partitions/crypto/mbedcrypto/nrf_security_src/drivers/nrf_cc3xx_platform/cmake_install.cmake")
+  include("/Users/torkaufmanngjerde/Documents/Viking/Viking_1.0/build/tfm/secure_fw/partitions/crypto/mbedcrypto/nrf_security_src/drivers/nrf_cc3xx_platform/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/Users/torkaufmanngjerde/Documents/viking_software/uart/build/tfm/secure_fw/partitions/crypto/mbedcrypto/nrf_security_src/drivers/nrf_oberon/cmake_install.cmake")
+  include("/Users/torkaufmanngjerde/Documents/Viking/Viking_1.0/build/tfm/secure_fw/partitions/crypto/mbedcrypto/nrf_security_src/drivers/nrf_oberon/cmake_install.cmake")
 endif()
 

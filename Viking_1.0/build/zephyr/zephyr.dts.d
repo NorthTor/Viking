@@ -22,4 +22,4 @@ empty_file.o: /opt/nordic/ncs/v2.3.0/zephyr/misc/empty_file.c \
  /opt/nordic/ncs/v2.3.0/zephyr/boards/arm/nrf9160dk_nrf9160/nrf9160dk_nrf9160_common.dts \
  /opt/nordic/ncs/v2.3.0/zephyr/boards/arm/nrf9160dk_nrf9160/nrf9160dk_nrf9160_common-pinctrl.dtsi \
  /opt/nordic/ncs/v2.3.0/zephyr/boards/arm/nrf9160dk_nrf9160/nrf9160dk_nrf9160_partition_conf.dts \
- /Users/torkaufmanngjerde/Documents/viking_software/uart/nrf9160dk_nrf9160_ns.overlay
+ /Users/torkaufmanngjerde/Documents/Viking/Viking_1.0/nrf9160dk_nrf9160_ns.overlay

@@ -35,7 +35,7 @@
 
 	st7735r_st7735r_ada_160x128: st7735r@0 {
 		compatible = "sitronix,st7735r";
-		spi-max-frequency = <400000>;
+		spi-max-frequency = <200000>;
 		reg = <0>;
 		cmd-data-gpios = <&gpio0 14 GPIO_ACTIVE_LOW>;	
 		reset-gpios = <&gpio0 15  GPIO_ACTIVE_LOW>;
