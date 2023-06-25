@@ -90,6 +90,7 @@ void main(void)
 	lv_obj_align(label5, LV_ALIGN_CENTER, 0, 0);
 	
 	lv_task_handler();
+	
 	display_blanking_off(display_dev);
 
 
