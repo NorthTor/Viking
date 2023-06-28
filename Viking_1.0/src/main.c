@@ -14,7 +14,6 @@
 #include <zephyr/logging/log.h>
 #include "max6921.c"
 
-
 #define LOG_LEVEL CONFIG_LOG_DEFAULT_LEVEL
 
 #define SLEEP_TIME_MS   250
@@ -91,7 +90,7 @@ void main(void)
 	
 	lv_task_handler();
 
-	
+
 	display_blanking_off(display_dev);
 
 
