@@ -222,10 +222,10 @@ int8_t bmi3_interface_init(struct bmi3_dev *dev, int8_t intf)
             exit(result);
         }
 
-        (void)coines_set_shuttleboard_vdd_vddio_config(0, 0);
+        //(void)coines_set_shuttleboard_vdd_vddio_config(0, 0);
         coines_delay_msec(100);
 
-        /* Bus configuration : I2C */
+        /* Bus configuration : I2C 
         if (intf == BMI3_I2C_INTF)
         {
             printf("I2C Interface\n");
@@ -234,11 +234,13 @@ int8_t bmi3_interface_init(struct bmi3_dev *dev, int8_t intf)
             dev->write = bmi3_i2c_write;
             dev->intf = BMI3_I2C_INTF;
 
-            /* SDO pin is made low */
+            // SDO pin is made low
             (void)coines_set_pin_config(COINES_SHUTTLE_PIN_SDO, COINES_PIN_DIRECTION_OUT, COINES_PIN_VALUE_LOW);
 
             (void)coines_config_i2c_bus(COINES_I2C_BUS_0, COINES_I2C_STANDARD_MODE);
         }
+        */
+
         /* Bus configuration : SPI */
         else if (intf == BMI3_SPI_INTF)
         {
