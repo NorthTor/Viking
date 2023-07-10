@@ -446,47 +446,47 @@
 		uart0_default: uart0_default {
 			phandle = < 0x2 >;
 			group1 {
-				psels = < 0x1d >, < 0x2001b >;
+				psels = < 0x6 >, < 0x2001b >;
 			};
 			group2 {
-				psels = < 0x1001c >, < 0x3001a >;
+				psels = < 0x10005 >, < 0x3001a >;
 				bias-pull-up;
 			};
 		};
 		uart0_sleep: uart0_sleep {
 			phandle = < 0x3 >;
 			group1 {
-				psels = < 0x1d >, < 0x1001c >, < 0x2001b >, < 0x3001a >;
+				psels = < 0x6 >, < 0x10005 >, < 0x2001b >, < 0x3001a >;
 				low-power-enable;
 			};
 		};
 		uart1_default: uart1_default {
 			phandle = < 0x4 >;
 			group1 {
-				psels = < 0x1 >, < 0x2000e >;
+				psels = < 0x6 >, < 0x2000e >;
 			};
 			group2 {
-				psels = < 0x10000 >, < 0x3000f >;
+				psels = < 0x10005 >, < 0x3000f >;
 				bias-pull-up;
 			};
 		};
 		uart1_sleep: uart1_sleep {
 			phandle = < 0x5 >;
 			group1 {
-				psels = < 0x1 >, < 0x10000 >, < 0x2000e >, < 0x3000f >;
+				psels = < 0x6 >, < 0x10005 >, < 0x2000e >, < 0x3000f >;
 				low-power-enable;
 			};
 		};
 		uart2_default: uart2_default {
 			phandle = < 0x6 >;
 			group1 {
-				psels = < 0x18 >, < 0x10017 >;
+				psels = < 0x6 >, < 0x10005 >;
 			};
 		};
 		uart2_sleep: uart2_sleep {
 			phandle = < 0x7 >;
 			group1 {
-				psels = < 0x18 >, < 0x10017 >;
+				psels = < 0x6 >, < 0x10005 >;
 				low-power-enable;
 			};
 		};

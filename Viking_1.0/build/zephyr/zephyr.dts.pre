@@ -587,11 +587,11 @@ timer2: timer@11000 {
 &pinctrl {
  uart0_default: uart0_default {
   group1 {
-   psels = <((((((0) * 32U) + (29)) & 0x7FU) << 0U) | ((0U & 0xFFFFU) << 16U))>,
+   psels = <((((((0) * 32U) + (6)) & 0x7FU) << 0U) | ((0U & 0xFFFFU) << 16U))>,
     <((((((0) * 32U) + (27)) & 0x7FU) << 0U) | ((2U & 0xFFFFU) << 16U))>;
   };
   group2 {
-   psels = <((((((0) * 32U) + (28)) & 0x7FU) << 0U) | ((1U & 0xFFFFU) << 16U))>,
+   psels = <((((((0) * 32U) + (5)) & 0x7FU) << 0U) | ((1U & 0xFFFFU) << 16U))>,
     <((((((0) * 32U) + (26)) & 0x7FU) << 0U) | ((3U & 0xFFFFU) << 16U))>;
    bias-pull-up;
   };
@@ -599,8 +599,8 @@ timer2: timer@11000 {
 
  uart0_sleep: uart0_sleep {
   group1 {
-   psels = <((((((0) * 32U) + (29)) & 0x7FU) << 0U) | ((0U & 0xFFFFU) << 16U))>,
-    <((((((0) * 32U) + (28)) & 0x7FU) << 0U) | ((1U & 0xFFFFU) << 16U))>,
+   psels = <((((((0) * 32U) + (6)) & 0x7FU) << 0U) | ((0U & 0xFFFFU) << 16U))>,
+    <((((((0) * 32U) + (5)) & 0x7FU) << 0U) | ((1U & 0xFFFFU) << 16U))>,
     <((((((0) * 32U) + (27)) & 0x7FU) << 0U) | ((2U & 0xFFFFU) << 16U))>,
     <((((((0) * 32U) + (26)) & 0x7FU) << 0U) | ((3U & 0xFFFFU) << 16U))>;
    low-power-enable;
@@ -609,11 +609,11 @@ timer2: timer@11000 {
 
  uart1_default: uart1_default {
   group1 {
-   psels = <((((((0) * 32U) + (1)) & 0x7FU) << 0U) | ((0U & 0xFFFFU) << 16U))>,
+   psels = <((((((0) * 32U) + (6)) & 0x7FU) << 0U) | ((0U & 0xFFFFU) << 16U))>,
     <((((((0) * 32U) + (14)) & 0x7FU) << 0U) | ((2U & 0xFFFFU) << 16U))>;
   };
   group2 {
-   psels = <((((((0) * 32U) + (0)) & 0x7FU) << 0U) | ((1U & 0xFFFFU) << 16U))>,
+   psels = <((((((0) * 32U) + (5)) & 0x7FU) << 0U) | ((1U & 0xFFFFU) << 16U))>,
     <((((((0) * 32U) + (15)) & 0x7FU) << 0U) | ((3U & 0xFFFFU) << 16U))>;
    bias-pull-up;
   };
@@ -621,8 +621,8 @@ timer2: timer@11000 {
 
  uart1_sleep: uart1_sleep {
   group1 {
-   psels = <((((((0) * 32U) + (1)) & 0x7FU) << 0U) | ((0U & 0xFFFFU) << 16U))>,
-    <((((((0) * 32U) + (0)) & 0x7FU) << 0U) | ((1U & 0xFFFFU) << 16U))>,
+   psels = <((((((0) * 32U) + (6)) & 0x7FU) << 0U) | ((0U & 0xFFFFU) << 16U))>,
+    <((((((0) * 32U) + (5)) & 0x7FU) << 0U) | ((1U & 0xFFFFU) << 16U))>,
     <((((((0) * 32U) + (14)) & 0x7FU) << 0U) | ((2U & 0xFFFFU) << 16U))>,
     <((((((0) * 32U) + (15)) & 0x7FU) << 0U) | ((3U & 0xFFFFU) << 16U))>;
    low-power-enable;
@@ -631,15 +631,15 @@ timer2: timer@11000 {
 
  uart2_default: uart2_default {
   group1 {
-   psels = <((((((0) * 32U) + (24)) & 0x7FU) << 0U) | ((0U & 0xFFFFU) << 16U))>,
-    <((((((0) * 32U) + (23)) & 0x7FU) << 0U) | ((1U & 0xFFFFU) << 16U))>;
+   psels = <((((((0) * 32U) + (6)) & 0x7FU) << 0U) | ((0U & 0xFFFFU) << 16U))>,
+    <((((((0) * 32U) + (5)) & 0x7FU) << 0U) | ((1U & 0xFFFFU) << 16U))>;
   };
  };
 
  uart2_sleep: uart2_sleep {
   group1 {
-   psels = <((((((0) * 32U) + (24)) & 0x7FU) << 0U) | ((0U & 0xFFFFU) << 16U))>,
-    <((((((0) * 32U) + (23)) & 0x7FU) << 0U) | ((1U & 0xFFFFU) << 16U))>;
+   psels = <((((((0) * 32U) + (6)) & 0x7FU) << 0U) | ((0U & 0xFFFFU) << 16U))>,
+    <((((((0) * 32U) + (5)) & 0x7FU) << 0U) | ((1U & 0xFFFFU) << 16U))>;
    low-power-enable;
   };
  };
@@ -1017,6 +1017,8 @@ arduino_spi: &spi3 {
   zephyr,display = &st7735r_st7735r_ada_160x128;
  };
  };
+
+
 
 &arduino_spi {
  compatible = "nordic,nrf-spim";

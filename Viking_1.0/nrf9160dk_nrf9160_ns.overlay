@@ -25,6 +25,8 @@
 	};
  };
 
+
+
 &arduino_spi {
 	compatible = "nordic,nrf-spim";
 	status = "okay";

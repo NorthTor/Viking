@@ -12,6 +12,8 @@
 #include <zephyr/kernel.h> 
 #include <zephyr/drivers/gpio.h>
 #include <zephyr/logging/log.h>
+#include <zephyr/drivers/uart.h>
+#include <string.h>
 #include "max6921.c"
 
 #define LOG_LEVEL CONFIG_LOG_DEFAULT_LEVEL
@@ -21,14 +23,31 @@
 #define STATUS_CHARGE 	8
 #define STATUS_PGOOD_BATTERY 	7
 
+/* change this to any other UART peripheral if desired */
+#define UART_DEVICE_NODE DT_CHOSEN(zephyr_shell_uart)
+#define MSG_SIZE 32
+
+static const struct device *const uart_dev = DEVICE_DT_GET(UART_DEVICE_NODE);
 
 // function declarations
 //int VFD_init(void);
 //int disp_VFD(const struct device *dev, int array[20]);
 
+void print_uart(char *buf)
+{
+	int msg_len = strlen(buf);
+
+	for (int i = 0; i < msg_len; i++) {
+		uart_poll_out(uart_dev, buf[i]);
+	}
+}
 
 void main(void)
-{		
+{	
+
+	char tx_buf[MSG_SIZE];
+	print_uart("Helo we are running!");
+
 	// VFD display initialization
 	const struct device *VFD_dev;
 	VFD_dev = VFD_init();
@@ -36,6 +55,7 @@ void main(void)
 	// TFT Enable signal 
 	const struct device *gpio_dev;
 	gpio_dev = DEVICE_DT_GET(DT_NODELABEL(gpio0));	
+	
 	gpio_pin_configure(gpio_dev, ENABLE_TFT, GPIO_OUTPUT);  // TFT
 	gpio_pin_configure(gpio_dev, STATUS_CHARGE, GPIO_INPUT); 
 	gpio_pin_configure(gpio_dev, STATUS_PGOOD_BATTERY , GPIO_INPUT); 
@@ -112,6 +132,7 @@ void main(void)
 			
 		}
 
+		print_uart("we are running 666!");
 		int power_good = gpio_pin_get_raw(gpio_dev, STATUS_PGOOD_BATTERY); // 0 indicates valid external power source connected, 1 = no power source
 		int bat_charging = gpio_pin_get_raw(gpio_dev, STATUS_CHARGE); // 0 indicates battery charging, 1 = no charging taking place
 

@@ -3623,8 +3623,8 @@
 #define DT_N_S_pin_controller_S_uart0_default_S_group1_PINCTRL_NUM 0
 
 /* Generic property macros: */
-#define DT_N_S_pin_controller_S_uart0_default_S_group1_P_psels {29 /* 0x1d */, 131099 /* 0x2001b */}
-#define DT_N_S_pin_controller_S_uart0_default_S_group1_P_psels_IDX_0 29
+#define DT_N_S_pin_controller_S_uart0_default_S_group1_P_psels {6 /* 0x6 */, 131099 /* 0x2001b */}
+#define DT_N_S_pin_controller_S_uart0_default_S_group1_P_psels_IDX_0 6
 #define DT_N_S_pin_controller_S_uart0_default_S_group1_P_psels_IDX_0_EXISTS 1
 #define DT_N_S_pin_controller_S_uart0_default_S_group1_P_psels_IDX_1 131099
 #define DT_N_S_pin_controller_S_uart0_default_S_group1_P_psels_IDX_1_EXISTS 1
@@ -3706,8 +3706,8 @@
 #define DT_N_S_pin_controller_S_uart0_default_S_group2_PINCTRL_NUM 0
 
 /* Generic property macros: */
-#define DT_N_S_pin_controller_S_uart0_default_S_group2_P_psels {65564 /* 0x1001c */, 196634 /* 0x3001a */}
-#define DT_N_S_pin_controller_S_uart0_default_S_group2_P_psels_IDX_0 65564
+#define DT_N_S_pin_controller_S_uart0_default_S_group2_P_psels {65541 /* 0x10005 */, 196634 /* 0x3001a */}
+#define DT_N_S_pin_controller_S_uart0_default_S_group2_P_psels_IDX_0 65541
 #define DT_N_S_pin_controller_S_uart0_default_S_group2_P_psels_IDX_0_EXISTS 1
 #define DT_N_S_pin_controller_S_uart0_default_S_group2_P_psels_IDX_1 196634
 #define DT_N_S_pin_controller_S_uart0_default_S_group2_P_psels_IDX_1_EXISTS 1
@@ -3848,10 +3848,10 @@
 #define DT_N_S_pin_controller_S_uart0_sleep_S_group1_PINCTRL_NUM 0
 
 /* Generic property macros: */
-#define DT_N_S_pin_controller_S_uart0_sleep_S_group1_P_psels {29 /* 0x1d */, 65564 /* 0x1001c */, 131099 /* 0x2001b */, 196634 /* 0x3001a */}
-#define DT_N_S_pin_controller_S_uart0_sleep_S_group1_P_psels_IDX_0 29
+#define DT_N_S_pin_controller_S_uart0_sleep_S_group1_P_psels {6 /* 0x6 */, 65541 /* 0x10005 */, 131099 /* 0x2001b */, 196634 /* 0x3001a */}
+#define DT_N_S_pin_controller_S_uart0_sleep_S_group1_P_psels_IDX_0 6
 #define DT_N_S_pin_controller_S_uart0_sleep_S_group1_P_psels_IDX_0_EXISTS 1
-#define DT_N_S_pin_controller_S_uart0_sleep_S_group1_P_psels_IDX_1 65564
+#define DT_N_S_pin_controller_S_uart0_sleep_S_group1_P_psels_IDX_1 65541
 #define DT_N_S_pin_controller_S_uart0_sleep_S_group1_P_psels_IDX_1_EXISTS 1
 #define DT_N_S_pin_controller_S_uart0_sleep_S_group1_P_psels_IDX_2 131099
 #define DT_N_S_pin_controller_S_uart0_sleep_S_group1_P_psels_IDX_2_EXISTS 1
@@ -4003,8 +4003,8 @@
 #define DT_N_S_pin_controller_S_uart1_default_S_group1_PINCTRL_NUM 0
 
 /* Generic property macros: */
-#define DT_N_S_pin_controller_S_uart1_default_S_group1_P_psels {1 /* 0x1 */, 131086 /* 0x2000e */}
-#define DT_N_S_pin_controller_S_uart1_default_S_group1_P_psels_IDX_0 1
+#define DT_N_S_pin_controller_S_uart1_default_S_group1_P_psels {6 /* 0x6 */, 131086 /* 0x2000e */}
+#define DT_N_S_pin_controller_S_uart1_default_S_group1_P_psels_IDX_0 6
 #define DT_N_S_pin_controller_S_uart1_default_S_group1_P_psels_IDX_0_EXISTS 1
 #define DT_N_S_pin_controller_S_uart1_default_S_group1_P_psels_IDX_1 131086
 #define DT_N_S_pin_controller_S_uart1_default_S_group1_P_psels_IDX_1_EXISTS 1
@@ -4086,8 +4086,8 @@
 #define DT_N_S_pin_controller_S_uart1_default_S_group2_PINCTRL_NUM 0
 
 /* Generic property macros: */
-#define DT_N_S_pin_controller_S_uart1_default_S_group2_P_psels {65536 /* 0x10000 */, 196623 /* 0x3000f */}
-#define DT_N_S_pin_controller_S_uart1_default_S_group2_P_psels_IDX_0 65536
+#define DT_N_S_pin_controller_S_uart1_default_S_group2_P_psels {65541 /* 0x10005 */, 196623 /* 0x3000f */}
+#define DT_N_S_pin_controller_S_uart1_default_S_group2_P_psels_IDX_0 65541
 #define DT_N_S_pin_controller_S_uart1_default_S_group2_P_psels_IDX_0_EXISTS 1
 #define DT_N_S_pin_controller_S_uart1_default_S_group2_P_psels_IDX_1 196623
 #define DT_N_S_pin_controller_S_uart1_default_S_group2_P_psels_IDX_1_EXISTS 1
@@ -4228,10 +4228,10 @@
 #define DT_N_S_pin_controller_S_uart1_sleep_S_group1_PINCTRL_NUM 0
 
 /* Generic property macros: */
-#define DT_N_S_pin_controller_S_uart1_sleep_S_group1_P_psels {1 /* 0x1 */, 65536 /* 0x10000 */, 131086 /* 0x2000e */, 196623 /* 0x3000f */}
-#define DT_N_S_pin_controller_S_uart1_sleep_S_group1_P_psels_IDX_0 1
+#define DT_N_S_pin_controller_S_uart1_sleep_S_group1_P_psels {6 /* 0x6 */, 65541 /* 0x10005 */, 131086 /* 0x2000e */, 196623 /* 0x3000f */}
+#define DT_N_S_pin_controller_S_uart1_sleep_S_group1_P_psels_IDX_0 6
 #define DT_N_S_pin_controller_S_uart1_sleep_S_group1_P_psels_IDX_0_EXISTS 1
-#define DT_N_S_pin_controller_S_uart1_sleep_S_group1_P_psels_IDX_1 65536
+#define DT_N_S_pin_controller_S_uart1_sleep_S_group1_P_psels_IDX_1 65541
 #define DT_N_S_pin_controller_S_uart1_sleep_S_group1_P_psels_IDX_1_EXISTS 1
 #define DT_N_S_pin_controller_S_uart1_sleep_S_group1_P_psels_IDX_2 131086
 #define DT_N_S_pin_controller_S_uart1_sleep_S_group1_P_psels_IDX_2_EXISTS 1
@@ -4382,10 +4382,10 @@
 #define DT_N_S_pin_controller_S_uart2_default_S_group1_PINCTRL_NUM 0
 
 /* Generic property macros: */
-#define DT_N_S_pin_controller_S_uart2_default_S_group1_P_psels {24 /* 0x18 */, 65559 /* 0x10017 */}
-#define DT_N_S_pin_controller_S_uart2_default_S_group1_P_psels_IDX_0 24
+#define DT_N_S_pin_controller_S_uart2_default_S_group1_P_psels {6 /* 0x6 */, 65541 /* 0x10005 */}
+#define DT_N_S_pin_controller_S_uart2_default_S_group1_P_psels_IDX_0 6
 #define DT_N_S_pin_controller_S_uart2_default_S_group1_P_psels_IDX_0_EXISTS 1
-#define DT_N_S_pin_controller_S_uart2_default_S_group1_P_psels_IDX_1 65559
+#define DT_N_S_pin_controller_S_uart2_default_S_group1_P_psels_IDX_1 65541
 #define DT_N_S_pin_controller_S_uart2_default_S_group1_P_psels_IDX_1_EXISTS 1
 #define DT_N_S_pin_controller_S_uart2_default_S_group1_P_psels_FOREACH_PROP_ELEM(fn) fn(DT_N_S_pin_controller_S_uart2_default_S_group1, psels, 0) \
 	fn(DT_N_S_pin_controller_S_uart2_default_S_group1, psels, 1)
@@ -4524,10 +4524,10 @@
 #define DT_N_S_pin_controller_S_uart2_sleep_S_group1_PINCTRL_NUM 0
 
 /* Generic property macros: */
-#define DT_N_S_pin_controller_S_uart2_sleep_S_group1_P_psels {24 /* 0x18 */, 65559 /* 0x10017 */}
-#define DT_N_S_pin_controller_S_uart2_sleep_S_group1_P_psels_IDX_0 24
+#define DT_N_S_pin_controller_S_uart2_sleep_S_group1_P_psels {6 /* 0x6 */, 65541 /* 0x10005 */}
+#define DT_N_S_pin_controller_S_uart2_sleep_S_group1_P_psels_IDX_0 6
 #define DT_N_S_pin_controller_S_uart2_sleep_S_group1_P_psels_IDX_0_EXISTS 1
-#define DT_N_S_pin_controller_S_uart2_sleep_S_group1_P_psels_IDX_1 65559
+#define DT_N_S_pin_controller_S_uart2_sleep_S_group1_P_psels_IDX_1 65541
 #define DT_N_S_pin_controller_S_uart2_sleep_S_group1_P_psels_IDX_1_EXISTS 1
 #define DT_N_S_pin_controller_S_uart2_sleep_S_group1_P_psels_FOREACH_PROP_ELEM(fn) fn(DT_N_S_pin_controller_S_uart2_sleep_S_group1, psels, 0) \
 	fn(DT_N_S_pin_controller_S_uart2_sleep_S_group1, psels, 1)
