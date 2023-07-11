@@ -371,6 +371,9 @@ ZephyrBuildConfiguration_DIR:PATH=/opt/nordic/ncs/v2.3.0/nrf/share/zephyrbuild-p
 //The directory containing a CMake configuration file for Zephyr.
 Zephyr_DIR:PATH=/opt/nordic/ncs/v2.3.0/zephyr/share/zephyr-package/cmake
 
+//Extra config fragments for mcuboot child image
+mcuboot_OVERLAY_CONFIG:STRING=/opt/nordic/ncs/v2.3.0/nrf/modules/mcuboot/tfm.conf;/opt/nordic/ncs/v2.3.0/nrf/subsys/partition_manager/partition_manager_enabled.conf
+
 //Value Computed by CMake
 uart_echo_bot_BINARY_DIR:STATIC=/Users/torkaufmanngjerde/Documents/Viking/Viking_1.0/build
 
@@ -497,7 +500,7 @@ CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_NM
 CMAKE_NM-ADVANCED:INTERNAL=1
 //number of local generators
-CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=141
+CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=142
 //ADVANCED property for variable: CMAKE_OBJCOPY
 CMAKE_OBJCOPY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_OBJDUMP
@@ -545,13 +548,12 @@ CONF_FILE_BUILD_TYPE:INTERNAL=
 //Details about finding Dtc
 FIND_PACKAGE_MESSAGE_DETAILS_Dtc:INTERNAL=[/opt/nordic/ncs/toolchains/v2.3.0/bin/dtc][v1.6.1(1.4.6)]
 //Details about finding Python3
-FIND_PACKAGE_MESSAGE_DETAILS_Python3:INTERNAL=[/opt/nordic/ncs/toolchains/v2.3.0/bin/python3.9][cfound components: Interpreter ][v3.9.6(3.9)]
+FIND_PACKAGE_MESSAGE_DETAILS_Python3:INTERNAL=[/opt/nordic/ncs/toolchains/v2.3.0/bin/python3.9][cfound components: Interpreter ][v3.9.6()]
 //West
 WEST:INTERNAL=/opt/nordic/ncs/toolchains/v2.3.0/bin/python3.9;-m;west
 //a configuration file for the runners Python package
 ZEPHYR_RUNNERS_YAML:INTERNAL=/Users/torkaufmanngjerde/Documents/Viking/Viking_1.0/build/zephyr/runners.yaml
 ZEPHYR_SDK_INSTALL_DIR:INTERNAL=/opt/nordic/ncs/toolchains/v2.3.0/opt/zephyr-sdk
-//Path to a program.
 _Python3_EXECUTABLE:INTERNAL=/opt/nordic/ncs/toolchains/v2.3.0/bin/python3.9
 //Python3 Properties
 _Python3_INTERPRETER_PROPERTIES:INTERNAL=Python;3;9;6;64;;cpython-39-darwin;/opt/nordic/ncs/toolchains/v2.3.0/Cellar/python@3.9/3.9.6/Frameworks/Python.framework/Versions/3.9/lib/python3.9;/opt/nordic/ncs/toolchains/v2.3.0/Cellar/python@3.9/3.9.6/Frameworks/Python.framework/Versions/3.9/lib/python3.9;/opt/nordic/ncs/toolchains/v2.3.0/Cellar/python@3.9/3.9.6/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages;/opt/nordic/ncs/toolchains/v2.3.0/Cellar/python@3.9/3.9.6/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages

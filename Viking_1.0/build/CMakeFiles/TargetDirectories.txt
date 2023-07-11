@@ -1,11 +1,11 @@
+/Users/torkaufmanngjerde/Documents/Viking/Viking_1.0/build/CMakeFiles/mcuboot_primary_app_hex.dir
 /Users/torkaufmanngjerde/Documents/Viking/Viking_1.0/build/CMakeFiles/bintools.dir
 /Users/torkaufmanngjerde/Documents/Viking/Viking_1.0/build/CMakeFiles/boards.dir
 /Users/torkaufmanngjerde/Documents/Viking/Viking_1.0/build/CMakeFiles/tfm_nonsecure_hex.dir
 /Users/torkaufmanngjerde/Documents/Viking/Viking_1.0/build/CMakeFiles/app.dir
 /Users/torkaufmanngjerde/Documents/Viking/Viking_1.0/build/CMakeFiles/zephyr_property_target.dir
 /Users/torkaufmanngjerde/Documents/Viking/Viking_1.0/build/CMakeFiles/pristine.dir
-/Users/torkaufmanngjerde/Documents/Viking/Viking_1.0/build/CMakeFiles/devicetree_target.dir
-/Users/torkaufmanngjerde/Documents/Viking/Viking_1.0/build/CMakeFiles/edit_cache.dir
+/Users/torkaufmanngjerde/Documents/Viking/Viking_1.0/build/CMakeFiles/mcuboot_primary_hex.dir
 /Users/torkaufmanngjerde/Documents/Viking/Viking_1.0/build/CMakeFiles/code_data_relocation_target.dir
 /Users/torkaufmanngjerde/Documents/Viking/Viking_1.0/build/CMakeFiles/compiler-cpp.dir
 /Users/torkaufmanngjerde/Documents/Viking/Viking_1.0/build/CMakeFiles/partition_manager_report.dir
@@ -22,6 +22,8 @@
 /Users/torkaufmanngjerde/Documents/Viking/Viking_1.0/build/CMakeFiles/tfm_secure_hex.dir
 /Users/torkaufmanngjerde/Documents/Viking/Viking_1.0/build/CMakeFiles/guiconfig.dir
 /Users/torkaufmanngjerde/Documents/Viking/Viking_1.0/build/CMakeFiles/menuconfig.dir
+/Users/torkaufmanngjerde/Documents/Viking/Viking_1.0/build/CMakeFiles/edit_cache.dir
+/Users/torkaufmanngjerde/Documents/Viking/Viking_1.0/build/CMakeFiles/devicetree_target.dir
 /Users/torkaufmanngjerde/Documents/Viking/Viking_1.0/build/zephyr/CMakeFiles/rebuild_cache.dir
 /Users/torkaufmanngjerde/Documents/Viking/Viking_1.0/build/zephyr/CMakeFiles/zephyr_pre0.dir
 /Users/torkaufmanngjerde/Documents/Viking/Viking_1.0/build/zephyr/CMakeFiles/edit_cache.dir
@@ -205,6 +207,8 @@
 /Users/torkaufmanngjerde/Documents/Viking/Viking_1.0/build/modules/nrf/samples/common/mcumgr_bt_ota_dfu/CMakeFiles/edit_cache.dir
 /Users/torkaufmanngjerde/Documents/Viking/Viking_1.0/build/modules/nrf/subsys/CMakeFiles/rebuild_cache.dir
 /Users/torkaufmanngjerde/Documents/Viking/Viking_1.0/build/modules/nrf/subsys/CMakeFiles/edit_cache.dir
+/Users/torkaufmanngjerde/Documents/Viking/Viking_1.0/build/modules/nrf/subsys/bootloader/bl_override/CMakeFiles/rebuild_cache.dir
+/Users/torkaufmanngjerde/Documents/Viking/Viking_1.0/build/modules/nrf/subsys/bootloader/bl_override/CMakeFiles/edit_cache.dir
 /Users/torkaufmanngjerde/Documents/Viking/Viking_1.0/build/modules/nrf/subsys/net/CMakeFiles/rebuild_cache.dir
 /Users/torkaufmanngjerde/Documents/Viking/Viking_1.0/build/modules/nrf/subsys/net/CMakeFiles/edit_cache.dir
 /Users/torkaufmanngjerde/Documents/Viking/Viking_1.0/build/modules/nrf/subsys/net/lib/CMakeFiles/rebuild_cache.dir
@@ -237,7 +241,13 @@
 /Users/torkaufmanngjerde/Documents/Viking/Viking_1.0/build/modules/hostap/CMakeFiles/rebuild_cache.dir
 /Users/torkaufmanngjerde/Documents/Viking/Viking_1.0/build/modules/hostap/CMakeFiles/edit_cache.dir
 /Users/torkaufmanngjerde/Documents/Viking/Viking_1.0/build/modules/mcuboot/CMakeFiles/rebuild_cache.dir
+/Users/torkaufmanngjerde/Documents/Viking/Viking_1.0/build/modules/mcuboot/CMakeFiles/dfu_application_zip.dir
+/Users/torkaufmanngjerde/Documents/Viking/Viking_1.0/build/modules/mcuboot/CMakeFiles/mcuboot_sign_target.dir
+/Users/torkaufmanngjerde/Documents/Viking/Viking_1.0/build/modules/mcuboot/CMakeFiles/mcuboot_guiconfig.dir
+/Users/torkaufmanngjerde/Documents/Viking/Viking_1.0/build/modules/mcuboot/CMakeFiles/mcuboot_menuconfig.dir
 /Users/torkaufmanngjerde/Documents/Viking/Viking_1.0/build/modules/mcuboot/CMakeFiles/edit_cache.dir
+/Users/torkaufmanngjerde/Documents/Viking/Viking_1.0/build/modules/mcuboot/CMakeFiles/mcuboot_subimage.dir
+/Users/torkaufmanngjerde/Documents/Viking/Viking_1.0/build/modules/mcuboot/CMakeFiles/mcuboot_shared_property_target.dir
 /Users/torkaufmanngjerde/Documents/Viking/Viking_1.0/build/modules/mcuboot/boot/bootutil/zephyr/CMakeFiles/rebuild_cache.dir
 /Users/torkaufmanngjerde/Documents/Viking/Viking_1.0/build/modules/mcuboot/boot/bootutil/zephyr/CMakeFiles/edit_cache.dir
 /Users/torkaufmanngjerde/Documents/Viking/Viking_1.0/build/modules/mbedtls/CMakeFiles/rebuild_cache.dir

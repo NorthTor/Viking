@@ -13,6 +13,7 @@
 #include <zephyr/drivers/gpio.h>
 #include <zephyr/logging/log.h>
 #include <zephyr/drivers/uart.h>
+#include <zephyr/drivers/spi.h>
 #include <string.h>
 #include "max6921.c"
 
@@ -46,7 +47,7 @@ void main(void)
 {	
 
 	char tx_buf[MSG_SIZE];
-	print_uart("Helo we are running!");
+	print_uart("Helo we are running DFU over UART!");
 
 	// VFD display initialization
 	const struct device *VFD_dev;
@@ -61,6 +62,7 @@ void main(void)
 	gpio_pin_configure(gpio_dev, STATUS_PGOOD_BATTERY , GPIO_INPUT); 
 	gpio_pin_set(gpio_dev, ENABLE_TFT, 0); // Logic LOW enables 3.3v supply for TFT display
 
+	//err = spi_transceive(spi_dev, &spi_cfg, &tx, &rx);
 
 	const struct device *display_dev;
 	display_dev = DEVICE_DT_GET(DT_CHOSEN(zephyr_display));
