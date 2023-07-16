@@ -149,6 +149,7 @@ ztest :
  {
   KEEP(*(".dbg_thread_info"));
  } > FLASH
+ mcumgr_handler_area : SUBALIGN(4) { _mcumgr_handler_list_start = .; KEEP(*(SORT_BY_NAME(._mcumgr_handler.static.*))); _mcumgr_handler_list_end = .; } > FLASH
  symbol_to_keep : ALIGN_WITH_INPUT
  {
   __symbol_to_keep_start = .;

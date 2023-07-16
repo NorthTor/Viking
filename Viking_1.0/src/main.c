@@ -45,9 +45,10 @@ void print_uart(char *buf)
 
 void main(void)
 {	
-
+	//printk("build time: " __DATE__ " " __TIME__ "\n");
+	
 	char tx_buf[MSG_SIZE];
-	print_uart("Helo we are running DFU over UART!");
+	print_uart("DFU over UAR: test nbr. 2");
 
 	// VFD display initialization
 	const struct device *VFD_dev;
