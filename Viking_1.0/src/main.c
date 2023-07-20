@@ -72,7 +72,7 @@ void main(void)
 		return;
 	}
 
-// STYLES Start ----------------------------------
+// -------------- STYLES Start ----------------------------------
 	uint8_t	R = 0;
 	uint8_t	G = 0;
 	uint8_t	B = 0;
@@ -86,7 +86,7 @@ void main(void)
 	lv_style_set_bg_color(&style, custom_color);
 	lv_style_set_border_width(&style, 0);
 
-// STYLES end ----------------------------------
+// -------------- STYLES end ----------------------------------
 
 	lv_obj_t *bg;
 	bg = lv_obj_create(lv_scr_act());

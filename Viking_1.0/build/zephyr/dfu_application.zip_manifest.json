@@ -1,6 +1,6 @@
 {
     "format-version": 0,
-    "time": 1689538815,
+    "time": 1689876995,
     "files": [
         {
             "load_address": 98304,
@@ -10,7 +10,7 @@
             "soc": "nRF9160_SICA",
             "size": 246047,
             "file": "app_update.bin",
-            "modtime": 1689538815
+            "modtime": 1689876995
         }
     ],
     "name": "Viking_1.0",
