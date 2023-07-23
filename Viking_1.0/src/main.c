@@ -28,15 +28,14 @@
 #define MSG_SIZE 32
 
 const struct device * uart_dev = DEVICE_DT_GET(DT_CHOSEN(zephyr_shell_uart));
-const struct device * spi_dev = DEVICE_DT_GET(DT_NODELABEL(bmi323));
 const struct device * display_dev = DEVICE_DT_GET(DT_CHOSEN(zephyr_display));
 
 // ---- Prototype functions ----------------------------------------------------
 void print_uart(char *buf);
-static void spi_init(void);
-void spi_test_send(void);
-
+const struct device * spi_init(void);
+void spi_test_send(const struct device *spi_dev);
 // -----------------------------------------------------------------------------
+
 static const struct spi_config spi_cfg = {
 	.operation = SPI_WORD_SET(8) | SPI_TRANSFER_MSB |
 		     SPI_MODE_CPOL | SPI_MODE_CPHA,
@@ -44,25 +43,18 @@ static const struct spi_config spi_cfg = {
 	.slave = 0,
 };
 
-
-static void spi_init(void)
-{	
+const struct device * spi_init(void)
+{
+	const struct device *spi_dev = DEVICE_DT_GET(DT_CHOSEN(zephyr_sensor));
 	if (spi_dev == NULL) {
 		print_uart("Could not get spi device");
 		return;
 	}
+	return spi_dev;
 };
 
-void print_uart(char *buf)
-{
-	int msg_len = strlen(buf);
 
-	for (int i = 0; i < msg_len; i++) {
-		uart_poll_out(uart_dev, buf[i]);
-	}
-};
-
-void spi_test_send(void)
+void spi_test_send(const struct device *spi_dev)
 {
 	int err;
 	static uint8_t tx_buffer[1];
@@ -86,22 +78,42 @@ void spi_test_send(void)
 		.count = 1
 	};
 
+
 	err = spi_transceive(spi_dev, &spi_cfg, &tx, &rx);
 	if (err) {
 		print_uart("SPI error");
 	} else {
-		/* Connect MISO to MOSI for loopback */
+		//Connect MISO to MOSI for loopback
 		print_uart("TX sent");
 		print_uart("RX recv");
 		tx_buffer[0]++;
 	}	
+}
+
+
+void print_uart(char *buf)
+{
+	int msg_len = strlen(buf);
+
+	for (int i = 0; i < msg_len; i++) {
+		uart_poll_out(uart_dev, buf[i]);
+	}
 };
+
+
+//------------------- MAIN LOOP ----------------------------------------------------------------------
 
 void main(void)
 {		
 	// VFD display initialization
 	const struct device *VFD_dev;
 	VFD_dev = VFD_init();
+
+	const struct device *spi_dev2;
+	print_uart("spi Example\n");
+	spi_dev2 = spi_init();
+	print_uart("After init\n");
+	
 
 	// TFT Enable signal 
 	const struct device *gpio_dev;
@@ -146,7 +158,7 @@ void main(void)
 	lv_obj_t *label1;
 	label1 = lv_label_create(lv_scr_act());
 	lv_label_set_recolor(label1, true);  
-	lv_label_set_text(label1, "#ffffff TOR");
+	lv_label_set_text(label1, "100k");
 	lv_obj_align(label1, LV_ALIGN_CENTER, 0, -60);
 
 	lv_obj_t *label2;
@@ -167,14 +179,11 @@ void main(void)
 
 
 	while (1) {
-
-		print_uart("SPIM Example\n");
-		spi_init();
-		print_uart("After init\n");
 		
-		spi_test_send();
+		spi_test_send(spi_dev2);
 		k_sleep(K_MSEC(1000));
-		print_uart(".");
+		print_uart(".\n");
+		
 
 		int a = 0;
 		int b = 0;
@@ -189,7 +198,6 @@ void main(void)
 			a++;		
 		}
 
-		print_uart("Das bot!");
 		int power_good = gpio_pin_get_raw(gpio_dev, STATUS_PGOOD_BATTERY); // 0 indicates valid external power source connected, 1 = no power source
 		int bat_charging = gpio_pin_get_raw(gpio_dev, STATUS_CHARGE); // 0 indicates battery charging, 1 = no charging taking place
 

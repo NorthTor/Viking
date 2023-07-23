@@ -4,9 +4,8 @@
 * SPDX-License-Identifier: Apache-2.0
 */
 
-#include <zephyr.h>
-#include <sys/printk.h>
-#include <drivers/spi.h>
+#include <zephyr/sys/printk.h>
+#include <zephyr/drivers/spi.h>
 
 
 #define MY_SPI_MASTER DT_NODELABEL(spi_test)

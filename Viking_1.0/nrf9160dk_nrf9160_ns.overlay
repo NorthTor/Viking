@@ -94,8 +94,8 @@
 		reset-gpios = <&gpio0 15  GPIO_ACTIVE_LOW>;
 		width = <80>;
 		height = <160>;
-		x-offset = <26>; //26
-		y-offset = <1>; //1
+		x-offset = <26>; 
+		y-offset = <1>; 
 		madctl = <0xC8>;
 		colmod = <0x05>;
 		caset = [00 00 00 4F];
@@ -113,6 +113,12 @@
 		gamctrp1 = [02 1c 07 12 37 32 29 2d 29 25 2b 39 00 01 03 10];
 		gamctrn1 = [03 1d 07 06 2e 2c 29 2d 2e 2e 37 3f 00 00 02 10];
         inversion-on;
+	};
+
+	bmi323: spi_device@1 {
+		compatible = "spi-device";
+		spi-max-frequency = <200000>;
+		reg = <1>;
 	};
 
 };

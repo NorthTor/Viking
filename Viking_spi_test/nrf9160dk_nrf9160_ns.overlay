@@ -1,71 +1,7 @@
 
-/*
- * Overlay file for TD Viking Watch hardware development
- *  SPI test of BMI323 Inertial Measurement Unit sensor - Accelerometer and gyroscope
- */
+&pinctrl {
 
- &pinctrl {
-
-	uart0_default: uart0_default {
-		group1 {
-			psels = <NRF_PSEL(UART_TX, 0, 6)>,
-				<NRF_PSEL(UART_RTS, 0, 27)>;
-		};
-		group2 {
-			psels = <NRF_PSEL(UART_RX, 0, 5)>,
-				<NRF_PSEL(UART_CTS, 0, 26)>;
-			bias-pull-up;
-		};
-	};
-
-	uart0_sleep: uart0_sleep {
-		group1 {
-			psels = <NRF_PSEL(UART_TX, 0, 6)>,
-				<NRF_PSEL(UART_RX, 0, 5)>,
-				<NRF_PSEL(UART_RTS, 0, 27)>,
-				<NRF_PSEL(UART_CTS, 0, 26)>;
-			low-power-enable;
-		};
-	};
-
-	uart1_default: uart1_default {
-		group1 {
-			psels = <NRF_PSEL(UART_TX, 0, 6)>,
-				<NRF_PSEL(UART_RTS, 0, 14)>;
-		};
-		group2 {
-			psels = <NRF_PSEL(UART_RX, 0, 5)>,
-				<NRF_PSEL(UART_CTS, 0, 15)>;
-			bias-pull-up;
-		};
-	};
-
-	uart1_sleep: uart1_sleep {
-		group1 {
-			psels = <NRF_PSEL(UART_TX, 0, 6)>,
-				<NRF_PSEL(UART_RX, 0, 5)>,
-				<NRF_PSEL(UART_RTS, 0, 14)>,
-				<NRF_PSEL(UART_CTS, 0, 15)>;
-			low-power-enable;
-		};
-	};
-
-	uart2_default: uart2_default {
-		group1 {
-			psels = <NRF_PSEL(UART_TX, 0, 6)>,
-				<NRF_PSEL(UART_RX, 0, 5)>;
-		};
-	};
-
-	uart2_sleep: uart2_sleep {
-		group1 {
-			psels = <NRF_PSEL(UART_TX, 0, 6)>,
-				<NRF_PSEL(UART_RX, 0, 5)>;
-			low-power-enable;
-		};
-	};
-
-	spi2_default: spi2_default {
+	spi3_default: spi3_default {
 		group1 {
 			psels = <NRF_PSEL(SPIS_SCK, 0, 13)>,
 					<NRF_PSEL(SPIS_MOSI, 0, 12)>,
@@ -74,7 +10,7 @@
 		};
 	};
 
-	spi2_sleep: spi2_sleep {
+	spi3_sleep: spi3_sleep {
 		group1 {
 			psels = <NRF_PSEL(SPIS_SCK, 0, 13)>,
 					<NRF_PSEL(SPIS_MOSI, 0, 12)>,
@@ -83,14 +19,13 @@
 			low-power-enable;
 		};
 	};
+};
 
- };
 
-
-spi_test: &spi2 {
+spi_test: &spi3 {
 	compatible = "nordic,nrf-spim";
 	status = "okay";
-	cs-gpios = <&arduino_header 9 GPIO_ACTIVE_LOW>;
+	cs-gpios = <&arduino_header 16 GPIO_ACTIVE_LOW>; /* D10 */
 	pinctrl-0 = <&spi3_default>;
 	pinctrl-1 = <&spi3_sleep>;
 	pinctrl-names = "default", "sleep";
