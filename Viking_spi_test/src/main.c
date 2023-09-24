@@ -16,7 +16,7 @@ const struct spi_dt_spec spi_spec = SPI_DT_SPEC_GET(DT_NODELABEL(bmi323), spi_cf
 
 //static void spi_init(void){
 //	if(spi_spec == NULL) {
-//		printk("Could not get %s device\n", spi_spec);
+//		printk("Could not ssget %s device\n", spi_spec);
 //		return;
 //	};
 //}
@@ -49,7 +49,7 @@ void spi_test_send(void)
 
 	err = spi_transceive_dt(&spi_spec, &tx, &rx);
 	if (err){
-                printk("error fappening\n");
+                printk("error happening\n");
         }	
 }
 

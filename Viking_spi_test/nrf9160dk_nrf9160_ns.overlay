@@ -1,9 +1,5 @@
 /*
  * Overlay file for TD Viking Watch hardware 
- *  - BMI323 Inertial Measurement Unit sensor - Accelerometer and gyroscope
- *  - MAX17048 BAttery fuel gauge sensor
- *  - TFT screen with ST7735S chip
- *  - FT230x USB to UART chip
  */
 
  &spi3 {
