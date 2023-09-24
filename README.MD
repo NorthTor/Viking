@@ -1,4 +1,4 @@
-<p align="center"><img src="logo.png" /></p>
+<p align="center"><img src="TD_logo_small.png" /></p>
 
 <h1 align="center"> Viking watch</h1>
 
@@ -33,11 +33,6 @@ sudo -isert-path/mcumgr --conntype=serial --connstring='/dev/cu.usbserial-DK0GXI
 
 ```
 
-<h3> Download & Installation </h3>
-
-```shell
-$ npm i boilerplate-readme-template
-```
 <h3>Contributing</h3>
 Keep it simple. Keep it minimal. Don't put every single feature just because you can.
 
