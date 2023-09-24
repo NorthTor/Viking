@@ -1,42 +1,35 @@
 <p align="center"><img src="logo.png" /></p>
 
-<h1 align="center"> Project Title - Readme.md HTML Template </h1>
+<h1 align="center"> Viking watch</h1>
 
-<p align="center"> Intro - Boilerplate for Readme.md on Github </p>
+<p align="center"> A beautiful piece of hardware combining old and new tech</p>
 
 <hr/>
 
-<p> Describe you project -> I hate to always "reinvent" README.md on GitHub that is why I decided to make this Starter README.md template. Also I prefer HTML syntax because I use HTML every day and it has some extra features like center the elements. </p>
+<p> Viking watch from Tordesign </p>
 
 <h3> List of features </h3>
 
 <ul>
-  <li>Beautiful Starter Template for README.md</li>
-  <li>Key feature num. 2</li>
-  <li>Key feature num. 3</li>
-  <li>Key feature num. 4</li>
+  <li>VFD tubes </li>
+  <li>OLED screen </li>
+  <li>Step counter</li>
+  <li>GPS</li>
 </ul>
 
-<h3> Demo -> Show me what you got </h3>
-
-<a href="#"> Link to your awesome Demo </a>
-
-<a href="#"> Another Link to your awesome Demo </a>
-
-<a href="https://www.designinspiration.info/"> Design Fonts Inspiration </a>
 
 <h3> Code Demo </h3>
 
 ```html
 
-We will use markdown for the Syntax Highlighting
+For uploading using mcumgr and mcuboot use the following commands:
 
-<ul>
-  <li>Beautiful Starter Template for README.md</li>
-  <li>Key feature num. 2</li>
-  <li>Key feature num. 3</li>
-  <li>Key feature num. 4</li>
-</ul>
+sudo -isert-path/mcumgr --conntype=serial --connstring='/dev/cu.usbserial-DK0GXIQW,baud=115200' xxxx
+1. replace xxxx with "image list"
+2. replace xxxx with "image upload app_update.bin"
+3. replace xxxx with "image test + hash"
+4. replace xxxx with "reset"
+5. replace xxxx with "image confirm + hash"
 
 ```
 
@@ -50,9 +43,9 @@ Keep it simple. Keep it minimal. Don't put every single feature just because you
 
 <h3>Authors or Acknowledgments</h3>
 <ul>
-  <li>Vladimir Carrer</li>
+  <li>Tor K. Gjerde</li>
 </ul>
 
 <h3>License</h3>
 
-This project is licensed under the MIT License
+copyright tordesign.net
