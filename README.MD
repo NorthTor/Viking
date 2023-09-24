@@ -1,10 +1,11 @@
-<p align="center"><img src="TD_logo_small.png" height="120"/></p>
+<p align="center"><img src="TD_logo_small.png" height="90"/></p>
 
 <h1 align="center"> Viking watch</h1>
 
-<p align="center"> A beautiful piece of hardware combining old and new tech</p>
+<p align="center"> A beautiful time piece combining old and new tech</p>
 
 <hr/>
+<p align="center"><img src="Viking_render.png" height="160"/></p>
 
 <p> Viking watch from Tordesign </p>
 
