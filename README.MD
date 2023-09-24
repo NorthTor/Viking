@@ -38,7 +38,6 @@ Keep it simple. Keep it minimal. Don't put every single feature just because you
 
 <h3>Authors or Acknowledgments</h3>
 <ul>
-  <li>Tor K. Gjerde</li>
 </ul>
 
 <h3>License</h3>
