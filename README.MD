@@ -1,4 +1,4 @@
-<p align="center"><img src="TD_logo_small.png" /></p>
+<p align="center"><img src="TD_logo_small.png" height="120"/></p>
 
 <h1 align="center"> Viking watch</h1>
 
