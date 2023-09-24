@@ -4,7 +4,6 @@
 
 <p align="center"> A beautiful time piece combining old and new tech</p>
 
-<hr/>
 <p align="center"><img src="Viking_render.png" height="160"/></p>
 
 <p> Viking watch from Tordesign </p>
