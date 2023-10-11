@@ -10,7 +10,6 @@
  / {
 	chosen {
 		zephyr,display = &st7735R_TFT_80x160;
-		zephyr,sensor = &bmi323;
 	};
  };
  
@@ -86,7 +85,7 @@
 	pinctrl-1 = <&spi3_sleep>;
 	pinctrl-names = "default", "sleep";
 
-	st7735R_TFT_80x160: spi_device@0 {
+	st7735R_TFT_80x160: spi_device_1@0 {
 		compatible = "sitronix,st7735r";
 		spi-max-frequency = <200000>;
 		reg = <0>;
@@ -114,5 +113,6 @@
 		gamctrn1 = [03 1d 07 06 2e 2c 29 2d 2e 2e 37 3f 00 00 02 10];
         inversion-on;
 	};
+	
 };
 

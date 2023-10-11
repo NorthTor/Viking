@@ -1,76 +1,102 @@
 /*
-* Copyright (c) 2012-2014 Wind River Systems, Inc.
-*
-* SPDX-License-Identifier: Apache-2.0
-*/
+ * Copyright (c) 2023 Alvaro Garcia Gomez <maxpowel@gmail.com>
+ *
+ * SPDX-License-Identifier: Apache-2.0
+ */
 
-#include <zephyr/sys/printk.h>
-#include <zephyr/drivers/spi.h>
+#include <zephyr/kernel.h>
+#include <zephyr/device.h>
+#include <zephyr/devicetree.h>
+#include <zephyr/drivers/fuel_gauge.h>
 
-#define MY_SPI_MASTER DT_NODELABEL(spi_test)
 
-static const struct spi_config spi_cfg = {
-	.operation = SPI_WORD_SET(8) | SPI_TRANSFER_MSB |
-		     SPI_MODE_CPOL | SPI_MODE_CPHA,
-	.frequency = 200000,
-	.slave = 0,
-};
 
-struct device * spi_dev;
-
-static void spi_init(void)
+int main(void)
 {
-	spi_dev = DEVICE_DT_GET(MY_SPI_MASTER);
+	const struct device *const dev = DEVICE_DT_GET(DT_CHOSEN(maxim_max17048));
+	int ret = 0;
 
-	if (spi_dev == NULL) {
-		printk("Could not get %s device\n", spi_dev);
-		return;
+	if (dev == NULL) {
+		printk("\nError: no device found.\n");
+		return 0;
 	}
-}
 
-void spi_test_send(void)
-{
-	int err;
-	static uint8_t tx_buffer[1];
-	static uint8_t rx_buffer[1];
+	if (!device_is_ready(dev)) {
+		printk("\nError: Device \"%s\" is not ready; "
+		       "check the driver initialization logs for errors.\n",
+		       dev->name);
+		return 0;
+	}
 
-	const struct spi_buf tx_buf = {
-		.buf = tx_buffer,
-		.len = sizeof(tx_buffer)
-	};
-	const struct spi_buf_set tx = {
-		.buffers = &tx_buf,
-		.count = 1
-	};
+	if (dev == NULL) {
+		printk("Found device \"%s\", getting fuel gauge data\n", dev->name);
+		return 0;
+	}
 
-	struct spi_buf rx_buf = {
-		.buf = rx_buffer,
-		.len = sizeof(rx_buffer),
-	};
-	const struct spi_buf_set rx = {
-		.buffers = &rx_buf,
-		.count = 1
-	};
-
-	err = spi_transceive(spi_dev, &spi_cfg, &tx, &rx);
-	if (err) {
-		printk("SPI error: %d\n", err);
-	} else {
-		/* Connect MISO to MOSI for loopback */
-		printk("TX sent: %x\n", tx_buffer[0]);
-		printk("RX recv: %x\n", rx_buffer[0]);
-		tx_buffer[0]++;
-	}	
-}
-
-void main(void)
-{
-	printk("SPIM Example\n");
-	spi_init();
-	printk("After init\n");
 	while (1) {
-		spi_test_send();
-		k_sleep(K_MSEC(1000));
-		printk(".");
+
+		struct fuel_gauge_get_property props[] = {
+			{
+				.property_type = FUEL_GAUGE_RUNTIME_TO_EMPTY,
+			},
+			{
+				.property_type = FUEL_GAUGE_RUNTIME_TO_FULL,
+			},
+			{
+				.property_type = FUEL_GAUGE_STATE_OF_CHARGE,
+			},
+			{
+				.property_type = FUEL_GAUGE_VOLTAGE,
+			}
+		};
+
+		ret = fuel_gauge_get_prop(dev, props, ARRAY_SIZE(props));
+		if (ret < 0) {
+			printk("Error: cannot get properties\n");
+		} else {
+			if (ret != 0) {
+				printk("Warning: Some properties failed\n");
+			}
+
+			if (props[0].status == 0) {
+				printk("Time to empty %d\n", props[0].value.runtime_to_empty);
+			} else {
+				printk(
+				"Property FUEL_GAUGE_RUNTIME_TO_EMPTY failed with error %d\n",
+				props[0].status
+				);
+			}
+
+			if (props[1].status == 0) {
+				printk("Time to full %d\n", props[1].value.runtime_to_full);
+			} else {
+				printk(
+				"Property FUEL_GAUGE_RUNTIME_TO_FULL failed with error %d\n",
+				props[1].status
+				);
+			}
+
+			if (props[2].status == 0) {
+				printk("Charge %d%%\n", props[2].value.state_of_charge);
+			} else {
+				printk(
+				"Property FUEL_GAUGE_STATE_OF_CHARGE failed with error %d\n",
+				props[2].status
+				);
+			}
+
+			if (props[3].status == 0) {
+				printk("Voltage %d\n", props[3].value.voltage);
+			} else {
+				printk(
+				"Property FUEL_GAUGE_VOLTAGE failed with error %d\n",
+				props[3].status
+				);
+			}
+		}
+
+
+		k_sleep(K_MSEC(5000));
 	}
+	return 0;
 }
