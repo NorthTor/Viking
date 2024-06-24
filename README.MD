@@ -6,8 +6,6 @@
 
 <p align="center"><img src="Viking_render.png" height="160"/></p>
 
-<p> Viking watch from Tordesign </p>
-
 <h3> List of features </h3>
 
 <ul>
