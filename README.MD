@@ -2,7 +2,7 @@
 
 <h1 align="center"> Viking watch</h1>
 
-<p align="center"> A beautiful time piece combining old and new tech</p>
+<p align="center"> A watch combining old and new tech</p>
 
 <p align="center"><img src="Viking_render.png" height="160"/></p>
 
